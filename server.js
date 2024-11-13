@@ -9,7 +9,7 @@ app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World! with nodemon");
 });
 app.get("/sidePage", (req, res) => {
   res.render("sample.ejs");
