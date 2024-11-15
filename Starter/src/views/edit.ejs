@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Page</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <form class="form-add-user" action="/update-user" method="post">
+      <fieldset class="fieldset-add-user">
+        <input
+          type="text"
+          name="userId"
+          value="<%= userData?.id %>"
+          class="d-none"
+        />
+        <legend>Edit user:</legend>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value="<%= userData?.email %>"
+        /><br /><br />
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value="<%= userData?.name %>"
+        /><br /><br />
+        <label for="city">City:</label>
+        <input
+          type="text"
+          id="city"
+          name="city"
+          value="<%= userData?.city %>"
+        /><br /><br />
+        <input type="submit" value="Save" />
+      </fieldset>
+    </form>
+  </body>
+</html>

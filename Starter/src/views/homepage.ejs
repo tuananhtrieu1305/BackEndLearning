@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="/">Home</a>
+      <a href="/create">Create</a>
+    </div>
+    <div class="w3-container">
+      <table class="w3-table-all w3-hoverable">
+        <thead>
+          <tr class="w3-light-grey">
+            <th>ID</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <% for (let i = 0; i < listUsers.length; i++) { %>
+        <tr>
+          <td><%= listUsers[i].id %></td>
+          <td><%= listUsers[i].email %></td>
+          <td><%= listUsers[i].name %></td>
+          <td><%= listUsers[i].city %></td>
+          <td>
+            <button><a href="/update/<%= listUsers[i].id %>">Edit</a></button>
+            <button><a href="/delete/<%= listUsers[i].id %>">Delete</a></button>
+          </td>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+  </body>
+</html>
